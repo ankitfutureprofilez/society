@@ -8,13 +8,12 @@ import Home from './Home/index'
 import Footer from './component/Footer';
 import Features from './Feature/features.jsx';
 import FeatureDetails from './Feature/featuredetails.jsx';
-
 import About from './AboutUs/About';
+import Contact from './Contact/Contact.jsx';
 
 function App() {
   return (
     <div className="App">    
-    
       <BrowserRouter>
       <Header />   
       <Routes>
@@ -22,7 +21,7 @@ function App() {
         <Route path="/feature" element={<Features />} />
         <Route path="/feature/:slug" element={<FeatureDetails />} />
         <Route path="/about-us" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>      

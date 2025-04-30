@@ -25,7 +25,7 @@ function Header() {
                         <Nav.Link href="/faq">FAQ</Nav.Link>
                     </Nav>
                     <div className="d-flex">
-                        <Link to='contactus' className="btn btn-primary header_btn">Contact Us</Link> 
+                        <Link to='contact-us' className="btn btn-primary header_btn">Contact Us</Link> 
                     </div>
                 </Navbar.Collapse>
             </Container>

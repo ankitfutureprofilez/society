@@ -6,15 +6,15 @@ function Faq() {
     function handleToggle(idx) {
         setActive(active === idx ? null : idx);
     }
-        const data = [
-            {
-                title: 'Is the app secure?',
-                description: "Yes, your privacy and security are our top priorities. The app uses advanced encryption and data protection protocols to ensure that all your information is secure. We also regularly update our security measures to stay ahead of potential threats."
-            },
-            {
-                title: 'Can it be customized for my society?',
-                description: "Absolutely! The app offers a range of customizable features to suit your society's specific needs. You can tailor things like notifications, community announcements, event management, and more, to ensure the app aligns with your society's requirements."
-            },
+    const data = [
+        {
+            title: 'Is the app secure?',
+            description: "Yes, your privacy and security are our top priorities. The app uses advanced encryption and data protection protocols to ensure that all your information is secure. We also regularly update our security measures to stay ahead of potential threats."
+        },
+        {
+            title: 'Can it be customized for my society?',
+            description: "Absolutely! The app offers a range of customizable features to suit your society's specific needs. You can tailor things like notifications, community announcements, event management, and more, to ensure the app aligns with your society's requirements."
+        },
         {
             title: 'What devices does it work on?',
             description: "The app is compatible with both Android and iOS devices, and it works seamlessly across smartphones, tablets, and desktops. Whether you're using an Android phone, iPhone, or a computer, you'll have full access to all the app’s features."
@@ -44,11 +44,11 @@ function Faq() {
                                             {item.title}
                                         </button>
                                     </h2>
-                                    <div 
-                                    id={`collapse${idx}`} 
-                                    className={`accordion-collapse collapse ${active === idx ? 'show' : ''}`} 
-                                    aria-labelledby={`heading${idx}`} 
-                                    data-bs-parent="#accordion">
+                                    <div
+                                        id={`collapse${idx}`}
+                                        className={`accordion-collapse collapse ${active === idx ? 'show' : ''}`}
+                                        aria-labelledby={`heading${idx}`}
+                                        data-bs-parent="#accordion">
                                         <div className="accordion-body">
                                             <div dangerouslySetInnerHTML={{ __html: item.description }} ></div>
                                         </div>
