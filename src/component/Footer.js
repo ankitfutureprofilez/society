@@ -9,7 +9,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 
 function Footer() {
 
-    const currentYear  = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
     return (
         <>
 
@@ -19,7 +19,7 @@ function Footer() {
                         <div className="col-lg-4 mb-md-4 mb-lg-0  ">
                             <div className="footer-logo">
                                 <Link to="/">
-                                    <img src="assets/images/footer-logo.png" alt="img" />
+                                    <img src="/assets/images/footer-logo.png" alt="img" />
                                 </Link>
                             </div>
                         </div>

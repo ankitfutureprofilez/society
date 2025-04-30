@@ -8,22 +8,22 @@ import Stakeholder from "./Stakeholder";
 import Ready from "./Ready";
 import Faq from "../component/Faq";
 import Contact from "./Contact";
- 
+
 
 function Home() {
-    return  (
-         <>
-           <Hero />
-           <Features />
-           <Whychoose />
-           <Testimonials/>
-           <VideoApp />
-           <Stakeholder/>
-           <Ready/>
-           <Faq />
-            <Contact />
-         </> 
-    )
+  return (
+    <>
+      <Hero />
+      <Features />
+      <Whychoose />
+      <Testimonials />
+      <VideoApp />
+      <Stakeholder />
+      <Ready />
+      <Faq />
+      <Contact />
+    </>
+  )
 }
 
 export default Home; 

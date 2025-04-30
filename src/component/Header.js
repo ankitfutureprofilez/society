@@ -9,7 +9,7 @@ function Header() {
         <Navbar expand="md" className="bg-body-tertiary">
             <Container>
                 <Navbar.Brand href="#">
-                    <img src='assets/images/logo.png' />
+                    <img src='/assets/images/logo.png' alt='Nexus logo' />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -19,9 +19,9 @@ function Header() {
                     // navbarScroll
                     >
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/features">Features</Nav.Link>
-                        <Nav.Link href="/benefits">Benefits</Nav.Link>
-                        <Nav.Link href="/aboutus">About us</Nav.Link>
+                        <Nav.Link href="/feature">Features</Nav.Link>
+                        {/* <Nav.Link href="/benefits">Benefits</Nav.Link> */}
+                        <Nav.Link href="/about-us">About us</Nav.Link>
                         <Nav.Link href="/faq">FAQ</Nav.Link>
                     </Nav>
                     <div className="d-flex">

@@ -5,12 +5,12 @@ function Features() {
     return (
         <>
             <div className="feature">
-                <div className="container"> 
-                  <HeadingBlock 
-                  shortTitle={'Features'} 
-                  title={'Features That Make a Difference'} 
-                  description={"Our app is designed to address your society's unique needs by providing tools that simplify management"} 
-                />
+                <div className="container">
+                    <HeadingBlock
+                        shortTitle={'Features'}
+                        title={'Features That Make a Difference'}
+                        description={"Our app is designed to address your society's unique needs by providing tools that simplify management"}
+                    />
                     <div className="row">
                         <div className="col-md-6">
                             <div className="app_management">
@@ -145,10 +145,10 @@ function Features() {
                         </div>
                     </div>
                     <div className="free-app">
-                        <Link to="features.html">View all</Link>
+                        <Link to="/feature">View all</Link>
                     </div>
-                </div> 
                 </div>
+            </div>
 
         </>
     );

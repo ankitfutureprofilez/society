@@ -6,6 +6,10 @@ import './style.css';
 import Header from './component/Header';
 import Home from './Home/index'
 import Footer from './component/Footer';
+import Features from './Feature/features.jsx';
+import FeatureDetails from './Feature/featuredetails.jsx';
+
+import About from './AboutUs/About';
 
 function App() {
   return (
@@ -15,7 +19,9 @@ function App() {
       <Header />   
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/feature" element={<Features />} />
+        <Route path="/feature/:slug" element={<FeatureDetails />} />
+        <Route path="/about-us" element={<About />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
       <Footer />
