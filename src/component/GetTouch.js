@@ -5,9 +5,7 @@ import axios from 'axios';
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 function GetTouch() {
-    const CAPUTRE_KEY = process.env.REACT_APP_HCAPTCHA_KEY || "0a4a99b8-7218-4b9c-ac02-c3f6d15c9db6"
-
-
+    const CAPUTRE_KEY = process.env.REACT_APP_HCAPTCHA_KEY
 
     const [loading, setloading] = useState(false);
     const [data, setData] = useState({
@@ -27,42 +25,42 @@ function GetTouch() {
     const [hCaptchaToken, setHCaptchaToken] = useState(null);
     const onVerify = (token) => {
         setHCaptchaToken(token);
-      };
-    
+    };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         // Name validation
         if (!data.name.trim() || data.name.trim().length < 2) {
             toast.error('Please enter a valid name.');
             return;
         }
-    
+
         // Email validation
         const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailValid.test(data.email)) {
             toast.error('Please enter a valid email.');
             return;
         }
-    
+
         // Phone validation
         const phoneValidate = /^[6-9]\d{9}$/;
         if (!phoneValidate.test(data.phone)) {
             toast.error('Please enter a valid phone number.');
             return;
         }
-    
+
         if (!hCaptchaToken) {
             toast.error("Please complete the hCaptcha verification first.");
             return;
-          }
+        }
         setloading(true);
-    
+
         try {
             const response = await axios.post('https://ghp-society-backend.onrender.com/form', data);
             toast.success(response.data?.message);
-    
+
             // Reset form
             setData({
                 name: "",
@@ -72,7 +70,7 @@ function GetTouch() {
                 message: "",
             });
             setHCaptchaToken("")
-    
+
         } catch (error) {
             console.error('app error', error);
             toast.error(error.response?.data?.message || 'Something went wrong.');
@@ -80,7 +78,7 @@ function GetTouch() {
             setloading(false);
         }
     };
-    
+
 
 
     return (
@@ -207,8 +205,8 @@ function GetTouch() {
                                     ></textarea>
                                 </div>
                                 <div className="hcapture" >
-                  <HCaptcha sitekey={CAPUTRE_KEY} data-theme="light" data-size="compact" onVerify={onVerify} required />
-                </div>
+                                    <HCaptcha sitekey={CAPUTRE_KEY} data-theme="light" data-size="compact" onVerify={onVerify} required />
+                                </div>
 
                                 <button type="submit" className="btn btn-primary" disabled={loading}>
                                     {loading ? "Sending..." : "Send Message"}
