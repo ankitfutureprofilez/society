@@ -43,11 +43,6 @@ function GetTouch() {
                 },
                 body: JSON.stringify(data),
             });
-
-            if (!response.ok) {
-                throw new Error('Something went wrong!');
-            }
-
             const result = await response.json();
             toast.success(result?.message)
             setData({
@@ -61,7 +56,6 @@ function GetTouch() {
         } catch (error) {
             console.error('app error', error);
             toast.error(error);
-            ;
         } finally {
             setloading(false)
         }
