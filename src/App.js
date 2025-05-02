@@ -10,7 +10,9 @@ import Features from './Feature/features.jsx';
 import FeatureDetails from './Feature/featuredetails.jsx';
 import About from './AboutUs/About';
 import Contact from './Contact/Contact.jsx';
+import Faqs from './Faq/Faqs.js'
 import { Toaster } from 'react-hot-toast';
+ 
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/feature" element={<Features />} />
         <Route path="/feature/:slug" element={<FeatureDetails />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="/faq" element={<Faqs />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
