@@ -266,8 +266,8 @@ a.feateue_btn:hover,a.feateue_btn:focus{background: #2c4b9d; border-color: #2c4b
 .contact-form .form-body .form-control{border: 1px solid rgba(0,0,0,.05);width: 100%;padding: 10px 24px;background: #fff;height: 56px;}
 .contact-form .form-body label{font-size: 14px;margin: 0 0 5px;display: block;font-size: 16px; font-weight: 400; line-height: 22.4px; letter-spacing: -0.05em; text-align: left; color: #595959;}
 .contact-form .form-body textarea.form-control{height: 139px;}
-.contact-form .form-body input[type="submit"]{display: block;background: #1F3C88;font-family: Poppins; font-size: 18px; font-weight: 400; line-height: 27px; letter-spacing: -0.04em; color: #fff;border-radius: 50px;padding: 14px 30px;width: 100%;border: none;text-align: center;}
-.contact-form .form-body input[type="submit"]:hover{background: #2c4b9d;}
+.contact-form .form-body input[type="submit"], .contact-form .form-body button{display: block;background: #1F3C88;font-family: Poppins; font-size: 18px; font-weight: 400; line-height: 27px; letter-spacing: -0.04em; color: #fff;border-radius: 50px;padding: 14px 30px;width: 100%;border: none;text-align: center;}
+.contact-form .form-body input[type="submit"]:hover, .contact-form .form-body button:hover{background: #2c4b9d;}
 
 .home-contact{padding: 0 0  100px;}
 .home-contact .heading_block h2 { font-family: Poppins; font-size: 40px; font-weight: 500; line-height: 44px; letter-spacing: -0.04em; text-align: center; }

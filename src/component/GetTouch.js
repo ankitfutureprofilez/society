@@ -1,5 +1,79 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Toaster, toast } from "react-hot-toast";
 function GetTouch() {
+    const [loading, setloading] = useState(false);
+    const [data, setData] = useState(
+        {
+            name: "",
+            email: "",
+            phone: "",
+            society: "",
+            message: "",
+        }
+    )
+
+    const handleChange = (e) => {
+        setData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+       
+        if (!data.name.trim() && data.name.trim().length < 2){
+            toast.error('Please enter a vaild name.');
+            return;
+        }
+        
+        const emailValid =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailValid.test(data.email)){
+            toast.error('Please enter a vaild email ');
+            return;
+        }
+        const phoneValidate = /^[6-9]\d{9}$/;
+        if (!phoneValidate.test(data.phone)) {
+            toast.error('Please enter a vaild phone number'); 
+            return;
+        }
+        setloading(true);
+        const toastId = toast.loading('Submitting...')
+
+        try {
+            const response = await fetch('https://ghp-society-backend.onrender.com/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Something went wrong!');
+            }
+
+            const result = await response.json(); 
+            toast.success('Form submitted successfully!', { id: toastId });
+            setData({
+                name: "",
+                email: "",
+                phone: "",
+                society: "",
+                message: "",
+
+            })
+        } catch (error) {
+            console.error('app error', error);
+            toast.error('Please Filled all field;', { id: toastId });
+            //   alert('Failed to submit form.');
+        } finally {
+            setloading(false)
+        }
+    };
+
+
     return (
         <>
             <div className="row">
@@ -67,24 +141,38 @@ function GetTouch() {
                         <div className="form-body">
                             <form>
                                 <div className="mb-3">
-                                    <input type="text" name="" className="form-control"  placeholder="Name" />
+                                    <input type="text" name="name" className="form-control"
+                                        value={data.name}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="Name" />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="email" name="" className="form-control" placeholder="Email" />
+                                    <input type="email" name="email" className="form-control"
+                                        value={data.email}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="Email" />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="number" name="" className="form-control" placeholder="Phone Number" />
+                                    <input type="number" name="phone" className="form-control"
+                                        value={data.phone}
+                                        onChange={handleChange}
+                                        required
+                                        placeholder="Phone Number" />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="text" name="" className="form-control" placeholder="Society Name" />
+                                    <input type="text" name="society" className="form-control" required value={data.society} onChange={handleChange} placeholder="Society Name" />
                                 </div>
                                 <div className="mb-3">
                                     <label>Message</label>
-                                    <textarea className="form-control"></textarea>
+                                    <textarea className="form-control" name="message" value={data.message} onChange={handleChange}></textarea>
                                 </div>
-                                <input type="submit" value="Submit" name="" />
-
+                                <button onClick={handleSubmit} type="button">
+                                    {loading ? "Loading.." : "Submit"}
+                                </button>
                             </form>
+                            <Toaster position="top-right" />
                         </div>
                     </div>
                 </div>

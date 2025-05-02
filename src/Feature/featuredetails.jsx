@@ -112,7 +112,7 @@ export default function featuredetails() {
                     </div>
                 </div>
             </div>
-            <Faq dataFaq={dataFaq} />
+            <Faq datafaq={dataFaq} />
         </>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-function Hero (){
+function Hero() {
     return (
         <div className="hero-sec">
             <div className="container">
@@ -11,9 +11,9 @@ function Hero (){
                             <p>Transform your society's management with innovative solutions designed for modern living. Our platform simplifies event planning, parcel tracking, complaint resolution, and visitor management, ensuring efficient and hassle-free operations for society administrators.</p>
                             <h2>Transform your society into a smarter and well-managed community</h2>
                             <p>Manage your society's communication, operation, and resident engagement with ease</p>
-                            <div className="d-flex ">
-                            <Link to="#">Request a Demo</Link> 
-                            <Link to="#">Download App</Link>
+                            <div className="d-flex gap-2">
+                                <Link to="#">Request a Demo</Link>
+                                <Link to="#">Download App</Link>
                             </div>
                         </div>
 
