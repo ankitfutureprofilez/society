@@ -7,6 +7,8 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 function GetTouch() {
     const CAPUTRE_KEY = process.env.REACT_APP_HCAPTCHA_KEY || "ES_b13550acb1224a91aaf6e22da19d7b39"
 
+
+    
     const [loading, setloading] = useState(false);
     const [data, setData] = useState({
         name: "",
