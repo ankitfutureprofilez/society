@@ -8,7 +8,7 @@ function Header() {
     return (
         <Navbar expand="md" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="#">
+                <Navbar.Brand href="/">
                     <img src='/assets/images/logo.png' alt='Nexus logo' />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />

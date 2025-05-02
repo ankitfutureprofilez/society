@@ -16,7 +16,7 @@ function Faqs() {
         },
         {
             title: 'I still have some more queries, where do I contact?',
-            description: 'If you have any additional questions or need assistance, feel free to contact our support team. You can reach us via email at <a href="mailto:info@futureprofilez.com">info@futureprofilez.com</a> or call us at <a href="tel:+917877089906">+917877089906</a>. We\'re always here to help!'
+            description: 'If you have any additional questions or need assistance, feel free to contact our support team. You can reach us via email at <a href="mailto:manageyoursociety@gmail.com">manageyoursociety@gmail.com</a> or call us at <a href="tel:+918899999987">+918899999987</a>. We\'re always here to help!'
         }
     ]
     return (

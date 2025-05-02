@@ -66,13 +66,13 @@ function Footer() {
                                     <h3>Contact Us</h3>
                                     <div className="contact_info">
                                         <div>
-                                            <Link to="tel:+917877089906">
-                                                <LuPhone size={18} /> +91 7877089906
+                                            <Link to="tel:+918899999987">
+                                                <LuPhone size={18} /> +91 8899999987
                                             </Link>
                                         </div>
                                         <div>
-                                            <Link to="mailto:info@nexus.com">
-                                                <MdMailOutline size={18} /> info@nexus.com
+                                            <Link to="mailto:manageyoursociety@gmail.com" className="">
+                                            <MdMailOutline size={18}/> manageyoursociety@gmail.com
                                             </Link>
                                         </div>
                                         <div>
