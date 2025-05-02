@@ -8,7 +8,6 @@ import Stakeholder from "./Stakeholder";
 import Ready from "./Ready";
 import Faq from "../component/Faq";
 import Contact from "./Contact";
-import MasonryLayout from "./MasonryLayout";
 
 
 function Home() {
