@@ -243,7 +243,7 @@ a.feateue_btn:hover,a.feateue_btn:focus{background: #2c4b9d; border-color: #2c4b
 .mission_about p{ font-size: 22.43px; font-weight: 400; line-height: 28.76px; letter-spacing: -0.04em; text-align: left;margin: 0; }
  
  .about-sec.faq h2{text-align: center;font-family: Poppins; font-size: 40px; font-weight: 500; line-height: 44px; letter-spacing: -0.04em; color: #1E1E1E;}
- .about-sec.faq h2 + p{font-family: Poppins; font-size: 22px; font-weight: 400; line-height: 28.6px; letter-spacing: -0.04em; text-align: center;color: #252525;margin: 0 0 40px;}
+ .about-sec.faq h2 + p{font-family: Poppins; font-size: 22px; font-weight: 400; line-height: 28.6px; letter-spacing: -0.04em; text-align: center;color: #252525;margin: 0 auto 40px;}
 
 
 .gettouch-sec { padding: 130px 0 100px;}

@@ -29,19 +29,19 @@ function Footer() {
                                     <h3>Quick Links</h3>
                                     <ul>
                                         <li>
-                                            <Link to="index.html">Home</Link>
+                                            <Link to="/">Home</Link>
                                         </li>
                                         <li>
-                                            <Link to="features.html">Features</Link>
+                                            <Link to="/feature">Features</Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="#">Benefits</Link>
+                                        </li> */}
+                                        <li>
+                                            <Link to="/about-us">About us</Link>
                                         </li>
                                         <li>
-                                            <Link to="about-us.html">About us</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="faq.html">FAQ</Link>
+                                            <Link to="/faq">FAQ</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -49,16 +49,16 @@ function Footer() {
                                     <h3>Features</h3>
                                     <ul>
                                         <li>
-                                            <Link to="#">Parcel Management</Link>
+                                            <Link to="/feature/parcel-management">Parcel Management</Link>
                                         </li>
                                         <li>
-                                            <Link to="#">Visitor Management</Link>
+                                            <Link to="/feature/visitor-management">Visitor Management</Link>
                                         </li>
                                         <li>
-                                            <Link to="#">Event Management</Link>
+                                            <Link to="/feature/event-management">Event Management</Link>
                                         </li>
                                         <li>
-                                            <Link to="#">SOS Alerts</Link>
+                                            <Link to="/feature/sos-alerts">SOS Alerts</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -76,7 +76,7 @@ function Footer() {
                                             </Link>
                                         </div>
                                         <div>
-                                            <Link to="javascript:void();">
+                                            <Link to="#">
                                                 <HiOutlineLocationMarker size={18} /> Jaipur, Rajasthan
                                             </Link>
                                         </div>
