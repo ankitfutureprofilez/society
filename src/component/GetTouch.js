@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 function GetTouch() {
     const [loading, setloading] = useState(false);
-    const [data, setData] = useState(
-        {
-            name: "",
-            email: "",
-            phone: "",
-            society: "",
-            message: "",
-        }
-    )
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        society: "",
+        message: "",
+    });
 
     const handleChange = (e) => {
         setData(prev => ({
