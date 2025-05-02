@@ -71,6 +71,7 @@ function GetTouch() {
                 society: "",
                 message: "",
             });
+            setHCaptchaToken("")
     
         } catch (error) {
             console.error('app error', error);
