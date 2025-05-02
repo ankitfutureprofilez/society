@@ -69,8 +69,8 @@ function GetTouch() {
                 society: "",
                 message: "",
             });
-            setHCaptchaToken("")
-
+                       // Reset hCaptcha
+                       setHCaptchaToken(null);
         } catch (error) {
             console.error('app error', error);
             toast.error(error.response?.data?.message || 'Something went wrong.');
