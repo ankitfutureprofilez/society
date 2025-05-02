@@ -10,10 +10,12 @@ import Features from './Feature/features.jsx';
 import FeatureDetails from './Feature/featuredetails.jsx';
 import About from './AboutUs/About';
 import Contact from './Contact/Contact.jsx';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div className="App">    
+      <Toaster position="top-right" />
       <BrowserRouter>
       <Header />   
       <Routes>

@@ -22,25 +22,21 @@ function GetTouch() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       
-        if (!data.name.trim() && data.name.trim().length < 2){
+        if (!data.name.trim() && data.name.trim().length < 2) {
             toast.error('Please enter a vaild name.');
             return;
         }
-        
-        const emailValid =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailValid.test(data.email)){
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailValid.test(data.email)) {
             toast.error('Please enter a vaild email ');
             return;
         }
         const phoneValidate = /^[6-9]\d{9}$/;
         if (!phoneValidate.test(data.phone)) {
-            toast.error('Please enter a vaild phone number'); 
+            toast.error('Please enter a vaild phone number');
             return;
         }
         setloading(true);
-        const toastId = toast.loading('Submitting...')
-
         try {
             const response = await fetch('https://ghp-society-backend.onrender.com/form', {
                 method: 'POST',
@@ -54,8 +50,8 @@ function GetTouch() {
                 throw new Error('Something went wrong!');
             }
 
-            const result = await response.json(); 
-            toast.success('Form submitted successfully!', { id: toastId });
+            const result = await response.json();
+            toast.success(result?.message)
             setData({
                 name: "",
                 email: "",
@@ -66,8 +62,8 @@ function GetTouch() {
             })
         } catch (error) {
             console.error('app error', error);
-            toast.error('Please Filled all field;', { id: toastId });
-            //   alert('Failed to submit form.');
+            toast.error(error);
+            ;
         } finally {
             setloading(false)
         }
@@ -139,40 +135,69 @@ function GetTouch() {
                             <p>Please feel free to send us message</p>
                         </div>
                         <div className="form-body">
-                            <form>
-                                <div className="mb-3">
-                                    <input type="text" name="name" className="form-control"
+
+                            {/* Contact Form */}
+                            <form onSubmit={handleSubmit}>
+                                <div className="form-group mb-3">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Your Name"
+                                        className="form-control"
                                         value={data.name}
                                         onChange={handleChange}
                                         required
-                                        placeholder="Name" />
+                                    />
                                 </div>
-                                <div className="mb-3">
-                                    <input type="email" name="email" className="form-control"
+                                <div className="form-group mb-3">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Your Email"
+                                        className="form-control"
                                         value={data.email}
                                         onChange={handleChange}
                                         required
-                                        placeholder="Email" />
+                                    />
                                 </div>
-                                <div className="mb-3">
-                                    <input type="number" name="phone" className="form-control"
+                                <div className="form-group mb-3">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Phone Number"
+                                        className="form-control"
                                         value={data.phone}
+                                        minLength={10}
+                                        maxLength={10}
                                         onChange={handleChange}
                                         required
-                                        placeholder="Phone Number" />
+                                    />
                                 </div>
-                                <div className="mb-3">
-                                    <input type="text" name="society" className="form-control" required value={data.society} onChange={handleChange} placeholder="Society Name" />
+                                <div className="form-group mb-3">
+                                    <input
+                                        type="text"
+                                        name="society"
+                                        placeholder="Your Society"
+                                        className="form-control"
+                                        value={data.society}
+                                        onChange={handleChange}
+                                    />
                                 </div>
-                                <div className="mb-3">
-                                    <label>Message</label>
-                                    <textarea className="form-control" name="message" value={data.message} onChange={handleChange}></textarea>
+                                <div className="form-group mb-3">
+                                    <textarea
+                                        name="message"
+                                        placeholder="Your Message"
+                                        className="form-control"
+                                        rows="4"
+                                        value={data.message}
+                                        onChange={handleChange}
+                                    ></textarea>
                                 </div>
-                                <button onClick={handleSubmit} type="button">
-                                    {loading ? "Loading.." : "Submit"}
+                                <button type="submit" className="btn btn-primary" disabled={loading}>
+                                    {loading ? "Sending..." : "Send Message"}
                                 </button>
                             </form>
-                            <Toaster position="top-right" />
+
                         </div>
                     </div>
                 </div>
