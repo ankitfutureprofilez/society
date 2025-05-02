@@ -26,7 +26,7 @@ const MasonryLayout = () => {
                 <div className="role">Society Admin</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -38,7 +38,7 @@ const MasonryLayout = () => {
                 <div className="role">Residents</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
 
         <div className="col">
@@ -50,7 +50,7 @@ const MasonryLayout = () => {
                 <div className="role">Residents</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -62,7 +62,7 @@ const MasonryLayout = () => {
                 <div className="role">Secretary</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -73,7 +73,7 @@ const MasonryLayout = () => {
                 <div className="role">Security guard</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -85,7 +85,7 @@ const MasonryLayout = () => {
                 <div className="role">Residents</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -96,7 +96,7 @@ const MasonryLayout = () => {
                 <div className="role">Society finances</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>
         <div className="col">
             <div className="testimonials_col_item">
@@ -108,7 +108,7 @@ const MasonryLayout = () => {
                 <div className="role">Residents</div>
             </div>
             </div>
-            <div className="pb-1">&nbsp;</div>
+            
         </div>              
       </Masonry>
     </div>

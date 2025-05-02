@@ -25,7 +25,7 @@ function Footer() {
                         </div>
                         <div className="col-lg-8">
                             <div className="row">
-                                <div className="col-md-4">
+                                <div className="col-md-3">
                                     <h3>Quick Links</h3>
                                     <ul>
                                         <li>
@@ -62,7 +62,7 @@ function Footer() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="col-md-4">
+                                <div className="col-md-5">
                                     <h3>Contact Us</h3>
                                     <div className="contact_info">
                                         <div>
